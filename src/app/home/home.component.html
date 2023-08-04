@@ -1,11 +1,50 @@
-<div class="text-center m-auto">
-    <h1>
-        This is home page
-    </h1>
-    <button class="btn btn-primary mt-5" routerLink="">Go back to Login</button>
-    
-<div class="" *ngFor="let item of userList" >
-    <span>Student Name :  {{item.name}}  <span> ( {{item.id}} )</span> </span> <br>
-</div>
+<div class="container">
 
+    <div class="text-center m-auto">
+        <h1>
+            This is home page
+        </h1>
+        <button class="btn btn-primary mt-5 mb-5" routerLink="">Go back to Login</button>
+        <div class="row">
+            <div class="col-sm-10 col-md-6 mx-auto">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>User List</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="" *ngFor="let item of userList">
+                            <span>Student Name : {{item.name}} <span> ( {{item.id}} )</span> </span> <br>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Start Table -->
+        <div class="row">
+            <div class="col-sm-10 col-md-6 mx-auto mt-4">
+
+                <div class="table">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="bg-primary text-white">ID</th>
+                                <th class="bg-primary text-white">NAME</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of userList">
+                                <td>{{item.id}}</td>
+                                <td>{{item.name}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- End Table -->
+
+    </div>
 </div>
